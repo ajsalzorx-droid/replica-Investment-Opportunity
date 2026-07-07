@@ -578,6 +578,39 @@ blockquote {
   font-size: 1.1rem;
 }
 
+.contact-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 46px;
+  padding: 0 18px;
+  border: 1px solid rgba(21, 21, 21, 0.12);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--black);
+  font-weight: 900;
+  box-shadow: 0 12px 28px rgba(21, 21, 21, 0.06);
+  transition: transform 180ms ease, border 180ms ease;
+}
+
+.contact-link:hover {
+  transform: translateY(-2px);
+  border-color: rgba(181, 31, 37, 0.34);
+}
+
+.contact-link-red {
+  border-color: transparent;
+  background: var(--red);
+  color: #fff;
+}
+
 .contact-form {
   display: grid;
   gap: 16px;
@@ -781,7 +814,8 @@ textarea:focus {
   }
 
   .hero-actions,
-  .button {
+  .button,
+  .contact-link {
     width: 100%;
   }
 
