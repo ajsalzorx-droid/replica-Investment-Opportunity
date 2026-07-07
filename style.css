@@ -417,6 +417,83 @@ h3 {
   color: #efe6df;
 }
 
+.sales-turnover {
+  background: var(--black);
+  color: #fff;
+}
+
+.sales-turnover .section-heading h2 {
+  color: #fff;
+}
+
+.sales-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(220px, 0.7fr) minmax(260px, 0.8fr);
+  gap: 16px;
+  align-items: stretch;
+}
+
+.sales-card {
+  min-height: 214px;
+  padding: clamp(22px, 3vw, 34px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.sales-card-main {
+  background:
+    linear-gradient(135deg, rgba(181, 31, 37, 0.34), transparent 62%),
+    rgba(255, 255, 255, 0.06);
+}
+
+.sales-card h3 {
+  max-width: 680px;
+  color: #fff;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.75rem, 3vw, 3rem);
+  line-height: 1.08;
+}
+
+.sales-card p {
+  color: #efe6df;
+}
+
+.sales-card span {
+  display: block;
+  margin-bottom: 18px;
+  color: #f2d7d6;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.sales-card strong {
+  display: block;
+  color: #fff;
+  font-size: clamp(1.8rem, 3.2vw, 3.2rem);
+  line-height: 1;
+}
+
+.sales-actions {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.sales-actions span {
+  display: flex;
+  align-items: center;
+  min-height: 58px;
+  padding: 14px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-weight: 850;
+}
+
 .solution,
 .investment,
 .benefits {
@@ -863,6 +940,7 @@ textarea:focus {
 
   .feature-list,
   .opportunity-plan,
+  .sales-grid,
   .pill-grid,
   .investment-grid,
   .timeline {
@@ -931,17 +1009,25 @@ textarea:focus {
   }
 
   .mobile-nav {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 2px;
     gap: 5px;
     margin-top: 8px;
+    scrollbar-width: none;
+  }
+
+  .mobile-nav::-webkit-scrollbar {
+    display: none;
   }
 
   .mobile-nav a {
+    flex: 0 0 auto;
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 32px;
+    padding: 0 14px;
     border: 1px solid rgba(21, 21, 21, 0.08);
     border-radius: 999px;
     background: rgba(245, 239, 228, 0.58);
@@ -1015,6 +1101,8 @@ textarea:focus {
   .opportunity-plan,
   .plan-actions,
   .target-grid,
+  .sales-grid,
+  .sales-actions,
   .pill-grid,
   .icon-grid,
   .reason-grid,
