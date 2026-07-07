@@ -385,6 +385,69 @@ h3 {
   margin: 0;
 }
 
+.catalogue {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(360px, 1.15fr);
+  gap: clamp(28px, 5vw, 72px);
+  align-items: center;
+  background: #fff;
+}
+
+.catalogue-copy p:not(.eyebrow) {
+  max-width: 660px;
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.catalogue-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 30px;
+}
+
+.catalogue-panel {
+  overflow: hidden;
+  border: 1px solid rgba(21, 21, 21, 0.08);
+  border-radius: var(--radius);
+  background: var(--beige-soft);
+  box-shadow: var(--shadow);
+}
+
+.catalogue-stats {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1px;
+  background: rgba(21, 21, 21, 0.08);
+}
+
+.catalogue-stats div {
+  display: grid;
+  gap: 2px;
+  padding: 18px 14px;
+  background: #fff;
+}
+
+.catalogue-stats strong {
+  color: var(--red);
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.catalogue-stats span {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-weight: 800;
+}
+
+.catalogue iframe {
+  display: block;
+  width: 100%;
+  height: min(620px, 62vh);
+  border: 0;
+  background: #fff;
+}
+
 .reason-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
@@ -682,6 +745,7 @@ textarea:focus {
   .hero,
   .about,
   .museum,
+  .catalogue,
   .contact {
     grid-template-columns: 1fr;
   }
@@ -814,6 +878,7 @@ textarea:focus {
   }
 
   .hero-actions,
+  .catalogue-actions,
   .button,
   .contact-link {
     width: 100%;
@@ -858,6 +923,14 @@ textarea:focus {
   .pricing-table div {
     grid-template-columns: 1fr;
     gap: 4px;
+  }
+
+  .catalogue-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .catalogue iframe {
+    height: 520px;
   }
 
   .contact {
