@@ -337,6 +337,86 @@ h3 {
   color: var(--muted);
 }
 
+.opportunity-plan {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(260px, 1fr);
+  gap: 22px;
+  margin-top: 22px;
+  padding: clamp(24px, 4vw, 38px);
+  border: 1px solid rgba(181, 31, 37, 0.14);
+  border-radius: var(--radius);
+  background:
+    linear-gradient(135deg, rgba(181, 31, 37, 0.08), transparent 58%),
+    var(--beige-soft);
+  box-shadow: 0 18px 44px rgba(21, 21, 21, 0.07);
+}
+
+.plan-copy h3 {
+  max-width: 540px;
+  margin-bottom: 12px;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: clamp(1.65rem, 2.8vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.plan-copy p:not(.eyebrow) {
+  max-width: 580px;
+  color: var(--muted);
+}
+
+.plan-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.plan-actions span {
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid rgba(21, 21, 21, 0.08);
+  border-radius: var(--radius);
+  background: #fff;
+  color: #2d2824;
+  font-size: 0.92rem;
+  font-weight: 850;
+}
+
+.target-grid {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.target-grid article {
+  padding: 22px;
+  border-radius: var(--radius);
+  background: var(--black);
+  color: #fff;
+}
+
+.target-grid span {
+  display: block;
+  margin-bottom: 8px;
+  color: #f2d7d6;
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.target-grid strong {
+  display: block;
+  font-size: clamp(1.55rem, 3vw, 2.8rem);
+  line-height: 1;
+}
+
+.target-grid p {
+  margin: 12px 0 0;
+  color: #efe6df;
+}
+
 .solution,
 .investment,
 .benefits {
@@ -782,6 +862,7 @@ textarea:focus {
   }
 
   .feature-list,
+  .opportunity-plan,
   .pill-grid,
   .investment-grid,
   .timeline {
@@ -931,6 +1012,9 @@ textarea:focus {
   }
 
   .feature-list,
+  .opportunity-plan,
+  .plan-actions,
+  .target-grid,
   .pill-grid,
   .icon-grid,
   .reason-grid,
