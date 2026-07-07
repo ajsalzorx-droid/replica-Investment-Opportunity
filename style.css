@@ -18,6 +18,10 @@ html {
   scroll-behavior: smooth;
 }
 
+section {
+  scroll-margin-top: 96px;
+}
+
 body {
   margin: 0;
   color: var(--black);
@@ -460,6 +464,10 @@ h3 {
   background: #fff;
 }
 
+.catalogue-mobile-preview {
+  display: none;
+}
+
 .reason-grid {
   grid-template-columns: repeat(5, minmax(0, 1fr));
 }
@@ -820,12 +828,16 @@ textarea:focus {
 }
 
 @media (max-width: 760px) {
+  section {
+    scroll-margin-top: 116px;
+  }
+
   .site-header {
     padding: 8px 16px 10px;
   }
 
   .brand {
-    width: 176px;
+    width: min(176px, 52vw);
   }
 
   .nav-links,
@@ -840,7 +852,7 @@ textarea:focus {
   .mobile-nav {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 6px;
+    gap: 5px;
     margin-top: 8px;
   }
 
@@ -848,22 +860,22 @@ textarea:focus {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 31px;
+    min-height: 32px;
     border: 1px solid rgba(21, 21, 21, 0.08);
     border-radius: 999px;
     background: rgba(245, 239, 228, 0.58);
     color: #332d29;
-    font-size: 0.65rem;
+    font-size: clamp(0.59rem, 2.65vw, 0.68rem);
     font-weight: 900;
   }
 
   .section-pad {
-    padding: 54px 18px;
+    padding: 48px 18px;
   }
 
   .hero {
-    gap: 24px;
-    padding-top: 42px;
+    gap: 22px;
+    padding-top: 38px;
     text-align: center;
   }
 
@@ -886,7 +898,7 @@ textarea:focus {
   }
 
   .hero-actions {
-    margin-top: 22px;
+    margin-top: 20px;
   }
 
   .hero-actions,
@@ -898,7 +910,17 @@ textarea:focus {
 
   .hero-visual video,
   .hero-visual img {
-    aspect-ratio: 0.82;
+    aspect-ratio: 0.86;
+  }
+
+  .feature-card,
+  .reason-card,
+  .investment-card,
+  .benefit-card,
+  .highlight-card,
+  .pill {
+    min-height: auto;
+    padding: 20px;
   }
 
   .about {
@@ -941,8 +963,38 @@ textarea:focus {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .catalogue-panel {
+    box-shadow: 0 18px 42px rgba(21, 21, 21, 0.08);
+  }
+
+  .catalogue-stats div {
+    padding: 16px 14px;
+  }
+
+  .catalogue-mobile-preview {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 16px;
+    background:
+      linear-gradient(135deg, rgba(181, 31, 37, 0.08), transparent 68%),
+      #fff;
+  }
+
+  .catalogue-mobile-preview span {
+    display: flex;
+    align-items: center;
+    min-height: 42px;
+    padding: 0 14px;
+    border: 1px solid rgba(181, 31, 37, 0.14);
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.82);
+    color: #2d2824;
+    font-weight: 900;
+  }
+
   .catalogue iframe {
-    height: 520px;
+    display: none;
   }
 
   .contact {
