@@ -63,6 +63,7 @@ a {
   justify-content: center;
   width: clamp(190px, 18vw, 250px);
   height: auto;
+  cursor: pointer;
 }
 
 .brand img {

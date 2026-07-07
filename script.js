@@ -23,3 +23,11 @@ contactForm.addEventListener("submit", (event) => {
   submitButton.disabled = true;
   contactForm.reset();
 });
+
+document.querySelectorAll(".brand").forEach((brandLink) => {
+  brandLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+    history.replaceState(null, "", window.location.pathname);
+  });
+});
