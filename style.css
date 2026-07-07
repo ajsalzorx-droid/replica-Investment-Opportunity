@@ -255,8 +255,7 @@ h3 {
   justify-self: end;
 }
 
-.hero-visual video,
-.hero-visual img {
+.hero-visual video {
   width: 100%;
   aspect-ratio: 0.86;
   object-fit: cover;
@@ -909,8 +908,7 @@ textarea:focus {
     width: 100%;
   }
 
-  .hero-visual video,
-  .hero-visual img {
+  .hero-visual video {
     aspect-ratio: 0.86;
   }
 
